@@ -1,0 +1,151 @@
+/* estilos para el cuerpo de la pagina*/
+body {
+    background-color: #D1BB9E; /* color de fondo*/
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* estilos para el formulario*/
+.formulario {
+    background-image: url('img/imagenFondo.jpg'); /* imagen de fondo formulario */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el formulario */
+    background-position: center; 
+    opacity: 0.8;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 50px 35px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column; /* distribuye los elementos en columna */
+    text-align: center;
+    width: 380px;
+}
+/* estilos para titulo de bienvenida */
+form h2{
+    font-size: 25px;
+    color: #31363F;
+    margin: 0;
+   
+}
+/* estilos para palabras de registo*/
+form p {
+    font-size: 18px;
+    color: #6D2932;
+    margin-bottom: 35px; 
+}
+/*estilos para cada casilla del formulario */
+.input-wrapper{
+    position: relative;
+    width: 305px;
+    margin-bottom: 35px;
+}
+input{
+    color: black;
+    padding: 20px 15px 20px 60px;
+    width: 100%;
+    border-radius: 25px;
+    border: 0;
+    box-shadow: 0 0 20px rgba(192, 203, 251, 0.7);
+    outline: none;
+    font-size: 15px;
+}
+/*estilos para boton*/
+.btn{
+    padding: 20px;
+    background: linear-gradient(
+        90deg,
+        rgba(161,130,98,1) 25%,
+        rgb(133, 88, 111,1)100%);
+        box-shadow: 0 0 20px rgba(192, 203, 251, 0.7);
+        color: white;
+        text-transform: uppercase;
+        font-size: 14px;
+        cursor: pointer;
+}
+/*color distinto al estar encima del boton*/
+.btn:hover{
+    background: rgb(177, 148, 111);
+}
+/*estilo para confirmacion de registro */
+.success{
+    position: absolute;
+    top: 90px;
+    color: green;
+    font-size: 18px;
+}
+/*estilos para errores en el registo */
+.error{
+    position: absolute;
+    top: 90px;
+    color: red;
+    font-size: 18px;
+}
+@media(max-width:991px){
+    body{
+        padding:10px
+    }
+    form{
+        padding:20px;
+        width: 100%;
+    }
+    .input-wrapper{
+        position: relative;
+        width: 80%;
+        margin-bottom: 35px;
+    }
+    input{
+        padding: 20px 0px 20px 45px
+    }
+
+}
+/* Estilos para la tabla de datos */
+#tablaDatos {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff; /* Color de fondo de la tabla */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+#tablaDatos th,
+#tablaDatos td {
+    padding: 10px;
+    text-align: left;
+}
+
+#tablaDatos th {
+    background-color: #6D2932; /* Color de fondo del encabezado */
+    color: white;
+    cursor: pointer;
+}
+
+#tablaDatos th:hover {
+    background-color: #4D1820; /* Color de fondo al pasar el cursor sobre el encabezado */
+}
+
+#tablaDatos td {
+    border-bottom: 1px solid #ddd; /* Borde inferior de las celdas */
+}
+
+#tablaDatos tr:last-child td {
+    border-bottom: none; /* Eliminar borde inferior en la última fila */
+}
+
+/* Estilos para flecha de ordenamiento ascendente/descendente */
+#tablaDatos th[data-columna]::after {
+    content: '\2195'; /* Código de flecha arriba/abajo */
+    margin-left: 5px;
+    opacity: 0.3;
+}
+
+#tablaDatos th[data-columna].asc::after {
+    content: '\2191'; /* Código de flecha arriba */
+    opacity: 1;
+}
+
+#tablaDatos th[data-columna].desc::after {
+    content: '\2193'; /* Código de flecha abajo */
+    opacity: 1;
+}
